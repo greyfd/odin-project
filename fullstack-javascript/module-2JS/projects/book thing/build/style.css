@@ -1,0 +1,163 @@
+    
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+body {
+  padding: 40px;
+  background-color: rgb(30,30,30);
+  color: rgb(225,225,225);
+  font-family: Poppins, arial;
+}
+#card-grid {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#card-grid > div {
+  background-color: rgb(60, 60, 60);
+  color: rgb(215,215,215);
+  width: 200px;
+  aspect-ratio: 1/1;
+  margin-bottom: 9px;
+}
+div > input {
+  width: 100%;
+}
+div {
+  padding: 20px;
+}
+.form {
+  transform: translateY(-50px);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#modal {
+  position: fixed;
+  left:25vw;
+  top: 12.5vh;
+  width: 50vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000;
+  display: none;
+  background-color: rgb(25,25,25);
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+.background-blur {
+  background-color: rgba(100, 100, 100, 0.1);
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+.new-book {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: none;
+  transition: all 0.15s;
+  padding: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.new-book:hover {
+  opacity: 0.7;
+  background-color: rgb(60 60 60 / 0.3);
+}
+
+.check {
+ position: absolute;
+ top: 5px;
+ right: 5px;
+ width: 25px;
+}
+input {
+  border-radius: 5px;
+  height: 30px;
+  border: transparent;
+}
+.submit {
+  width: calc(100% - 40px); 
+  border-radius: 10px; 
+  border: transparent; 
+  height: 25px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.submit:hover {
+  background-color: rgb(200, 200, 200);
+}
+.submit:active {
+  background-color: rgb(180, 180, 180);
+}
+.close-icon {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  font-size: 48px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.close-icon:hover {
+  color: rgb(200, 200, 200);
+}
+.close-icon:active {
+  color: rgb(180, 180, 180); 
+}
+.delete {
+  color: rgb(180, 180, 180);
+  border: none;
+  padding: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.delete:hover {
+  color: rgb(200, 200, 200);
+}
+.delete:active {
+  color: rgb(180, 180, 180); 
+}
+
+.collapsable {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+  border-bottom: 4px solid rgb(215,215,215);
+}
+
+.content {
+  background-color: rgb(40, 40, 40);
+  overflow: hidden;
+  list-style: none;
+  max-height: 0;
+  transition: max-height, padding 0.2s ease-out;
+  padding: 0px;
+}
+
+.caret {
+  display: inline;
+  margin-left: auto;
+  font-size: 24px;
+}
+
+.plus {
+  font-size: 28px;
+  margin-left: auto;
+}

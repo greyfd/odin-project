@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Library</title>
+  <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  </style>
+</head>
+<body>
+  <div class="background-blur"></div>
+  <div id="modal">
+    <h1 style="width: 100%; height: fit-content;">Add a New Book</h1>
+  <div class="form">
+    <form action="">
+      <div class="inner-div">
+        <label for="book-name">Book Name:</label>
+        <input type="text" name="" id="book-name">
+      </div>
+      <div  class="inner-div">
+        <label for="author">Author:</label>
+        <input type="text" name="" id="author">
+      </div>
+      <div  class="inner-div">
+        <label for="page-count">Page Count:</label>
+        <input type="number" name="" id="page-count">
+      </div>
+      <div  class="inner-div"> 
+        <label for="read">Read:</label>
+        <select name="" id="read">
+          <option value="">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <button class="submit" type="submit" id="submit" style="">Submit</button>
+    </form>
+  </div>
+  <ion-icon name="close-outline" class="close-icon" onclick="toggleModal()"></ion-icon>
+</div>
+
+<div class="collapsable" onclick="toggleCollapse()">
+  <h1>My Library</h1>
+  <ion-icon name="caret-down-outline" class="caret"></ion-icon>
+</div>
+<div class="content">
+  <ul>
+    <li><div class="new-book">Add New Book 
+        <ion-icon name="add-outline" class="plus"></ion-icon>
+
+    </div></li>
+    <li><div id="card-grid"></div></li>
+  </ul>
+
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>
